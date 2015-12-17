@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TA0-YC-oEv">
+                                <rect key="frame" x="168" y="295" width="39" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="V25-VC-QK1"/>
+                                </constraints>
+                                <state key="normal" title="Parse"/>
+                                <connections>
+                                    <action selector="parse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAj-ft-6rc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JSON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="to4-Yu-cDx">
+                                <rect key="frame" x="165.5" y="25" width="44.5" height="18"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="KN4-4Y-cGE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fem-Pk-cWT">
+                                <rect key="frame" x="0.0" y="51" width="375" height="234"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="234" id="GCg-0k-kn1"/>
+                                </constraints>
+                                <string key="text">{
+	"a" : 6,
+	"b" : -34,
+       "c" : 8,
+       "d" : "sample te\"t",
+    "my-plug-ins" : [
+        "python",
+        "c++",
+        "ruby"
+        ],
+    "dog" : { "age": 3, "name": "Jack" },
+    "isBool" : true
+}</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Json result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2L-kQ-muk">
+                                <rect key="frame" x="16" y="345" width="343" height="322"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="L8h-By-1No"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="L8h-By-1No"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fem-Pk-cWT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="39" id="84D-Bp-CPI"/>
+                            <constraint firstItem="W2L-kQ-muk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9GD-Sw-Okz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W2L-kQ-muk" secondAttribute="trailing" id="DnD-pO-cuY"/>
+                            <constraint firstItem="Fem-Pk-cWT" firstAttribute="centerX" secondItem="TA0-YC-oEv" secondAttribute="centerX" id="KbP-eO-Hcj"/>
+                            <constraint firstItem="TA0-YC-oEv" firstAttribute="top" secondItem="Fem-Pk-cWT" secondAttribute="bottom" constant="10" id="VBK-pX-yeN"/>
+                            <constraint firstItem="Fem-Pk-cWT" firstAttribute="centerX" secondItem="to4-Yu-cDx" secondAttribute="centerX" id="ZFA-wP-WF5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W2L-kQ-muk" secondAttribute="bottom" id="fER-M4-JeD"/>
+                            <constraint firstItem="TA0-YC-oEv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lzK-iJ-Sh5"/>
+                            <constraint firstItem="Fem-Pk-cWT" firstAttribute="top" secondItem="to4-Yu-cDx" secondAttribute="bottom" constant="8" symbolic="YES" id="mYo-NC-CvY"/>
+                            <constraint firstItem="W2L-kQ-muk" firstAttribute="top" secondItem="TA0-YC-oEv" secondAttribute="bottom" constant="20" id="toB-td-4t3"/>
+                            <constraint firstItem="Fem-Pk-cWT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xV7-BW-XF0"/>
+                            <constraint firstItem="to4-Yu-cDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="5" id="xbv-gW-HaF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="84D-Bp-CPI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputSourceTextField" destination="Fem-Pk-cWT" id="Msj-8G-qGb"/>
+                        <outlet property="labelA" destination="W2L-kQ-muk" id="pME-1n-lr5"/>
+                        <outlet property="parseButton" destination="TA0-YC-oEv" id="bTE-Dw-FMK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.5" y="334.5"/>
+        </scene>
+    </scenes>
+</document>
